@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Button from '../Button/Button'
 import style from './task.module.scss'
 const TaskInput = ({ id, name, isChecked, editFunc, statusFunc, deleteOne }) => {
     let [changeName, setChangeName] = useState(name)
+    useEffect(()=>{
+        setChangeName(name)
+    },[name])
     return (
 
         <div className={style.task}>

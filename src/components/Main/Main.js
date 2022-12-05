@@ -58,6 +58,7 @@ const Main = () => {
         const tasksToDelete = tasks.filter((task) => {
             return task.isChecked === false;
         });
+        console.log(tasksToDelete);
         setTasks(tasksToDelete)
 
     }
@@ -134,7 +135,6 @@ const Main = () => {
         )
     }
     // useEffect(() => {
-    //     printData()
     //     console.log(tasks);
         
     // }, [tasks]);
