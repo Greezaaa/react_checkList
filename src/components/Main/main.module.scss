@@ -1,0 +1,59 @@
+.form{
+    margin: 1rem auto 0;
+    width: min(200px, 100% - 10px);
+    min-height: 45px;
+}
+
+.tasksList, .btns {
+    margin: 1rem auto 0;
+    width: min(300px, 100% - 10px);
+    
+}
+.btns {
+    display: flex ;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    &>button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        transition: all 200ms ease;
+        translate: 0 0;
+        scale: .98;
+        &:hover {
+            translate: 0 -1px;
+            scale: 1;
+        }
+    }
+    &>button>img {
+        width: 30px;
+    }
+}
+.tasksList {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    &>li>div {
+        transition: all 200ms ease;
+        translate: 0 0px;
+        scale: 1;
+        &:hover {
+            translate: 0 -1px;
+            scale: 1.02;
+        }
+    }
+    &>li>div>input {
+        border: none;
+       
+    }
+    &>li>div>button {
+        border: none;
+        margin-right: 5px
+    }
+}

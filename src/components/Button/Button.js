@@ -1,15 +1,15 @@
 import style from './button.module.scss'
-const Button = ({ mainClass, 
-    secondaryClass, 
-    func, 
-    text, 
-    img }) => {
+const Button = ({ mainClass,
+    secondaryClass,
+    func,
+    id
+}) => {
     return (
         <button
             className={`${style[mainClass]} ${style[secondaryClass]}`}
-            onClick={(e) => func(e)}
+            onClick={(e) => func(e, id)}
         >
-            {img !== null ? <img src={img} atl={text} />:  text }
+            
         </button>
 
     )
